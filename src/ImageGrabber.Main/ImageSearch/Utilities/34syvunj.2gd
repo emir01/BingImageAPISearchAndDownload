@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ImageGrabberTest.ImageSearch.Objects;
+using ImageGrabberTest.Utilities;
+
+namespace ImageGrabberTest.ImageSearch.Utilities
+{
+    /// <summary>
+    /// Maps  bing utility image ressults to internal image grabber results
+    /// </summary>
+    public class ImageResultMappings
+    {
+        /// <summary>
+        /// Map an ImageResult from the Bing Search Utilities to a internal Image Grabber
+        /// ImageQueryResult object
+        /// </summary>
+        /// <param name="imageResult"></param>
+        /// <returns></returns>
+        public static ImageQueryResult MapImageQueryResultFromImageResult(ImageResult imageResult)
+        {
+            var imageQueryResult = new ImageQueryResult()
+                                   {
+
+                                        ID = imageResult.ID,
+
+                                        Title = imageResult.Title,
+
+                                        MediaUrl = imageResult.MediaUrl,
+
+                                        SourceUrl = imageResult.SourceUrl,
+
+                                        DisplayUrl = imageResult.DisplayUrl,
+
+                                        Width = imageResult.Width,
+
+                                        Height = imageResult.Height,
+
+                                        FileSize = imageResult.FileSize,
+
+                                        ContentType = imageResult.ContentType,
+
+                                        ThumbnailResult = ImageQueryThumbnailResult(imageResult.Thumbnail)
+                                    };
+
+            return imageQueryResult;
+        }
+
+        /// <summary>
+        /// Map an ImageResult Thumbnail object to the internal Image Grabber ImageThumbnail
+        /// </summary>
+        /// <param name="thumbnail"></param>
+        /// <returns></returns>
+        private static ImageQueryThumbnailResult GetThumbnailResultFromThumbnail(Thumbnail thumbnail)
+        {
+            var imageQueryThumbnailResult = new ImageQueryThumbnailResult(){
+                
+
+            };
+
+            return imageQueryThumbnailResult;
+        }
+    }
+}
