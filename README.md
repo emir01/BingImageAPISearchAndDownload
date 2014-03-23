@@ -16,6 +16,8 @@ To get it working a valid account key needs to be setup in  ImageGrabber.CommonG
 
 Current Status
 ==
-This utility was used to download and experiment with bulk image downloads for a given query string. The images where then
-used by another project to create HTML bootstrap static galleries used in a web site.
+This utility was used to search and experiment with bulk image downloads for a given query string. The images where then
+used by another project to create multiple HTML bootstrap static galleries, containing multiple images (20+), used in a static web site.
+
+
 
